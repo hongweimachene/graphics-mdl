@@ -85,7 +85,7 @@ def run(filename):
                     float(args[0]), float(args[1]), float(args[2]),
                     float(args[3]), float(args[4]), float(args[5]))
             matrix_mult(stack[-1], tmp)
-            if command['commands'] in symbols:
+            if command['constants'] in symbols:
                 reflect = command['constants']
             draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
             tmp = []
@@ -96,18 +96,18 @@ def run(filename):
                        float(args[0]), float(args[1]), float(args[2]),
                        float(args[3]), step_3d)
              matrix_mult( stack[-1], tmp )
-             if command['commands'] in symbols:
+             if command['constants'] in symbols:
                  reflect = command['constants']
-            draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
-            tmp = []
-            reflect = '.white'
+             draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
+             tmp = []
+             reflect = '.white'
 
         elif line == 'torus':
             add_torus(tmp,
                     float(args[0]), float(args[1]), float(args[2]),
-                    float(args[3]), float(args[4]), float(args[5]))
+                    float(args[3]), float(args[4]), step_3d)
             matrix_mult(stack[-1], tmp)
-            if command['commands'] in symbols:
+            if command['constants'] in symbols:
                 reflect = command['constants']
             draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
             tmp = []
