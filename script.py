@@ -80,7 +80,7 @@ def run(filename):
             matrix_mult( stack[-1], t )
             stack[-1] = [ x[:] for x in t]
 
-        elif line == 'box'
+        elif line == 'box':
             add_box(tmp,
                     float(args[0]), float(args[1]), float(args[2]),
                     float(args[3]), float(args[4]), float(args[5]))
