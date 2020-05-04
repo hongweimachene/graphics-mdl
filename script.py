@@ -100,7 +100,7 @@ def run(filename):
                  reflect = command['constants']
             draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
             tmp = []
-            reflect = '.white
+            reflect = '.white'
 
         elif line == 'torus':
             add_torus(tmp,
